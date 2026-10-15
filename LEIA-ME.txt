@@ -1,0 +1,31 @@
+AutoClick AI — compilação online para Windows
+
+Este pacote permite gerar AutoClickAI.exe no GitHub Actions sem instalar Python no seu PC.
+O Python será instalado apenas no ambiente temporário de compilação na nuvem.
+
+PASSOS
+1. Crie uma conta em https://github.com/ (se ainda não tiver).
+2. Crie um repositório NOVO e marque-o como Private.
+3. Extraia este ZIP no seu computador.
+4. Envie para o repositório todos os arquivos e pastas extraídos, mantendo a estrutura:
+   - autoclick_ai_demo.py
+   - requirements.txt
+   - .github/workflows/build.yml
+   - LEIA-ME.txt
+   Se enviar pelo site do GitHub, crie o arquivo de workflow pelo caminho
+   .github/workflows/build.yml caso a interface não permita enviar a pasta oculta.
+5. Abra a aba Actions do repositório.
+6. Se aparecer uma confirmação para habilitar Actions, habilite.
+7. Selecione "Build AutoClickAI for Windows" e clique em "Run workflow"
+   (ou faça um commit na branch main para iniciar automaticamente).
+8. Aguarde o job ficar verde. Abra a execução concluída e, na seção Artifacts,
+   baixe "AutoClickAI-Windows".
+9. Extraia o ZIP baixado. Dentro dele estará AutoClickAI.exe.
+
+SEGURANÇA
+- Mantenha o repositório privado.
+- Não suba senhas, tokens ou arquivos confidenciais.
+- O programa inicia em modo simulação. Para cliques reais, desmarque essa opção
+  e use somente em interfaces em que você tem autorização.
+- O arquivo gerado ainda precisa ser testado no Windows de destino. O SmartScreen
+  pode exibir um aviso para executáveis novos e sem assinatura digital.
